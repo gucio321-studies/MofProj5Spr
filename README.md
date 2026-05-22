@@ -3,7 +3,7 @@
 
 <p align="center">
 <!--AUTOURL-BEGIN-->
-<a href="https://github.com/gucio321-studies/MofProj5Spr/blob/pdf/ft2zxcxvx.pdf">
+<a href="https://github.com/gucio321-studies/MofProj5Spr/blob/pdf/mofproj5spr.pdf">
 <!--AUTOURL-END-->
 <img src="./resources/button.png"></a>
 </p>
