@@ -31,17 +31,57 @@ Po ostatniej iteracji otrzymano następujący rozkład wartości $u(i, j)$
 Rozkłąd $u(i, j)$ po minimalizacji bezpośredniej S.
 ```
 
+## Minimalizacja gradientowa
+
+Można również dokonać minimalizacji S poprzez wyliczenie wartości gradientu.
+Dzięki temu zamiast czterokrotnie liczyć wartości S można to zrobić tylko 2 razy.
+Przyjmuje się wartość $d = 0.001$ i wylicza się wartość S dla $u(i, j) = u(i, j) \pm d$.
+Nastęþnie wyznacza się wartość $\nabla S = \frac{S_+ - S_-}{2d}$ i zmniejsza się wartość $u(i, j)$ o $\beta \nabla S$.
+Obliczenia wykonano dla 4 różnych wartości współczynnika $\beta \in \left\{0.1, 0.2, 0.3, 0.4, 0.49\right\}$.
+
+Na poniższym wykresie zestawiono zależności S od numeru iteracji dla różnych wartości $\beta$ oraz minimalizacji bezpośredniej.
+
+```{figure} ./03.png
+Zależność S od numeru iteracji dla minimalizacji bezpośredniej oraz gradientowej dla różnych wartości $\beta$ oraz dla minimalizacji bezpośredniej.
+```
+
+Dla $\beta \to 0.5$ operacja jest szybciej zbierzna.
+Można zaobserwować, że pomimo, żę $\beta = 0.49$ teoretycznie jest zbiega się wolniej, wartość $S$ będzie ostatecznie mniejsza niż dla $\beta=0.4$.
+
+Poniżej przedstawiono rozkłąd $u(i, j)$ dla $\beta = 0.1$ oraz $\beta = 0.49$. Nie zamieszczono pozostałych rozkładów, ponieważ są one praktycznie identyczne jak $\beta = 0.49$.
+
+```{figure} ./04.png
+Rozkłąd $u(i, j) dla $\beta = 0.1
+```
+
+```{figure} ./05.png
+Rozkłąd $u(i, j) dla $\beta = 0.49
+```
+
+Pozostałe rozkłądy mogą zostać odtworzone poprzez uruchemienie symulacji we własnym zakresie - patrz [literatura](#literatura).
+
+## Losowa minimalizacja.
+
+Wykonano również minimalizację losową.
+W tym celu, dla wartości $r=0.1$ losowano pewną wartość liczbową z zakresu $u_0 \in \left<-r,r\right>$ następnie sprawdzano, czy wartość S
+przed zmianą była większa niż po zmainie. Jeżeli tak, aplikowano zmianę.
+
+Poniższy wykres przedstawia zależność wartośći S od numeru iteracji.
+
+```{figure} ./06.png
+Zależność wartośći S od numeru iteracji
+```
 
 ## Porównanie wydajności czasowej poszczegulnych metod
 
 | Operacja | Czas wykonania [ms] |
 | --- | --- |
 | Minimalizacja bezpośrednia funkcjonału S | 1.275s |
-| Task 2, $\beta = 0.1$ | 0.4842s |
-| Task 2, $\beta = 0.3$ | 0.4812s |
-| Task 2, $\beta = 0.4$ | 0.4665s |
-| Task 2, $\beta = 0.49$ | 0.5196s |
-| Task 2 (total) | 1.952s |
+| Minimalizacja gradientowa, $\beta = 0.1$ | 0.4842s |
+| Minimalizacja gradientowa, $\beta = 0.3$ | 0.4812s |
+| Minimalizacja gradientowa, $\beta = 0.4$ | 0.4665s |
+| Minimalizacja gradientowa, $\beta = 0.49$ | 0.5196s |
+| Minimalizacja gradientowa (total) | 1.952s |
 | Task 3 | 0.5409s |
 
 # Obliczenia
@@ -52,4 +92,4 @@ Rozkłąd $u(i, j)$ po minimalizacji bezpośredniej S.
 
 # Literatura
 
-- prof. dr hab. inż. Wojciech Łużny - Kurs Mechaniki.
+- MOF5 - Program symulacyjny - https://github.com/gucio321-studies/MOFProj5 rewizja 89d6aa92d9ae955f4a85322c0e12771553f73e8f
