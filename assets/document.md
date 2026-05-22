@@ -72,6 +72,12 @@ Poniższy wykres przedstawia zależność wartośći S od numeru iteracji.
 Zależność wartośći S od numeru iteracji
 ```
 
+WYkonano kopię obrazu $u(i, j)$ co `100` iteracji. Postęp przedstawiono poniżej
+
+```{figure} ./07.png
+Obrazy $u(i,j)$ dla poszczegulnych iteracji.
+```
+
 ## Porównanie wydajności czasowej poszczegulnych metod
 
 | Operacja | Czas wykonania [ms] |
@@ -82,14 +88,12 @@ Zależność wartośći S od numeru iteracji
 | Minimalizacja gradientowa, $\beta = 0.4$ | 0.4665s |
 | Minimalizacja gradientowa, $\beta = 0.49$ | 0.5196s |
 | Minimalizacja gradientowa (total) | 1.952s |
-| Task 3 | 0.5409s |
-
-# Obliczenia
-
-# Szacowanie niepewności
+| Minimalizacja losowa | 0.5409s |
 
 # Podsumowanie
 
+Jak widać, najbardziej efektywne zarówno czasowo jak i pod względem szybkości minimalizacji S jest podejście minimalizacji gradientowej.
+
 # Literatura
 
-- MOF5 - Program symulacyjny - https://github.com/gucio321-studies/MOFProj5 rewizja 9b6f174c695dc013162dd1fa2969e6a0e9532da3
+- MOF5 - Program symulacyjny - https://github.com/gucio321-studies/MOFProj5 rewizja b8f2c43d5b0a57494f49f2d1d1ffbffd0a84c6a7
