@@ -92,4 +92,4 @@ Zależność wartośći S od numeru iteracji
 
 # Literatura
 
-- MOF5 - Program symulacyjny - https://github.com/gucio321-studies/MOFProj5 rewizja 89d6aa92d9ae955f4a85322c0e12771553f73e8f
+- MOF5 - Program symulacyjny - https://github.com/gucio321-studies/MOFProj5 rewizja 9b6f174c695dc013162dd1fa2969e6a0e9532da3
